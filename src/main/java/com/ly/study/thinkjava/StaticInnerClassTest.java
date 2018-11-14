@@ -1,0 +1,49 @@
+package com.ly.study.thinkjava;
+
+public class StaticInnerClassTest {
+
+	public static void main(String[] args) {
+		double[] d = new double[20];
+		for (int i = 0; i < 20; ++i) {
+			d[i] = 100 * Math.random();
+		}
+		ArrayAlg.Pair p = ArrayAlg.minmax(d);
+		System.out.println("min=" + p.getFirst());
+		System.out.println("min=" + p.getSecond());
+	}
+
+}
+
+class ArrayAlg {
+	
+	public static class Pair {
+		private double first;
+		private double second;
+		private static String str = "123";
+		public Pair(double f, double s) {
+			first = f;
+			second = s;
+			System.out.println(str);
+		}
+		public double getFirst() {
+			return first;
+		}
+		
+		public double getSecond() {
+			return second;
+		}
+	}
+	public static Pair minmax(double[] values) {
+		double min = Double.MAX_VALUE;
+		double max = Double.MIN_VALUE;
+		for (double v : values) {
+			if (min > v) {
+				min = v;
+			}
+			if (max < v) {
+				max = v;
+			}
+		}
+		return new Pair(min, max);
+	}
+}

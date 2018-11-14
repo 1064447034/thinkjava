@@ -1,0 +1,36 @@
+package com.ly.study.thinkjava.thread.countdownlatch;
+
+import java.util.Random;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+
+public class TaskPortion implements Runnable {
+	private static int counter = 0;
+	private final int id = counter++;
+	private static Random rand = new Random(47);
+	private final CountDownLatch latch;
+	
+	public TaskPortion(CountDownLatch latch) {
+		this.latch = latch;
+	}
+	
+	@Override
+	public void run() {
+		try {
+			doWork();
+			latch.countDown();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+	public void doWork() throws InterruptedException {
+		TimeUnit.MILLISECONDS.sleep(rand.nextInt(5000));
+		System.out.println(this + "complete");
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("%1s-3d ", id);
+	}
+}
