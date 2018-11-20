@@ -1,4 +1,4 @@
-package sort;
+package sort.compare;
 
 public class Shell {
 

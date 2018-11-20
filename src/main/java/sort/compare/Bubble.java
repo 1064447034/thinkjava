@@ -1,4 +1,4 @@
-package sort;
+package sort.compare;
 
 import java.util.Arrays;
 
