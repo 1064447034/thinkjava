@@ -5,30 +5,21 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-class Jon {
-	private String air;
-
-	public String getAir() {
-		return air;
-	}
-
-	public void setAir(String air) {
-		this.air = air;
+public class CharacterTest {
+	static final int tableSizeFor(int cap) {
+		int n = cap - 1;
+		n |= n >>> 1;
+		n |= n >>> 2;
+		n |= n >>> 4;
+		n |= n >>> 8;
+		n |= n >>> 16;
+		return (n < 0) ? 1 : (n >= Integer.MAX_VALUE) ? Integer.MAX_VALUE : n + 1;
 	}
 	
-}
-public class CharacterTest {
 	public static void main(String[] args) {
-		List<Integer> lst = Arrays.asList(132,3, 5, 23);
-		Integer r = Collections.min(lst, new Comparator<Integer>() {
-			@Override
-			public int compare(Integer o1, Integer o2) {
-				return o1 - o2;
-			}
-		});
+		System.out.println(tableSizeFor(1));
+		System.out.println(tableSizeFor(5));
+		System.out.println(tableSizeFor(16));
 		
-		System.out.println(r);
-		
-		System.out.println(Integer.toBinaryString(10 >>> 2));
 	}
 }
