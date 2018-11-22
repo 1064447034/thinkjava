@@ -355,11 +355,11 @@
 			<artifactId>zookeeper</artifactId>
 			<version>3.4.6</version>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.taobao.pamirs.schedule</groupId> -->
-<!-- 			<artifactId>tbschedule</artifactId> -->
-<!-- 			<version>3.3.3.2</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.taobao.pamirs.schedule</groupId> -->
+		<!-- <artifactId>tbschedule</artifactId> -->
+		<!-- <version>3.3.3.2</version> -->
+		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>org.mybatis.caches</groupId>
@@ -397,6 +397,29 @@
 			<groupId>bcel</groupId>
 			<artifactId>bcel</artifactId>
 			<version>5.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
 
 	</dependencies>

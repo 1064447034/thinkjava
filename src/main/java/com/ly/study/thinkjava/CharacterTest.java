@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 public class CharacterTest {
 	static final int tableSizeFor(int cap) {
